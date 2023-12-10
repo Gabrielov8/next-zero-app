@@ -1,9 +1,10 @@
 import React, { ReactNode } from 'react';
 import type { Metadata } from 'next';
 
-import '@/assets/styles/index.scss';
+import '@theme/scss/globals.scss';
 
 import { AppProviders } from '@/shared/config/providers';
+import Layout from '@/shared/ui/components/Layout/Layout';
 
 export const metadata: Metadata = {
 	title: 'Create Next App',
@@ -17,7 +18,7 @@ export default function RootLayout({
 }) {
 	return (
 		<html lang='ru'>
-		<body><AppProviders>{children}</AppProviders></body>
+		<body><AppProviders><Layout>{children}</Layout></AppProviders></body>
 		</html>
 	);
 }

@@ -1,0 +1,10 @@
+@use '@theme' as *;
+
+.root {
+	//background: yellow;
+	padding: 16px 16px;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	background: themeColor(success01);
+}

@@ -1,0 +1,54 @@
+@use 'sass:list';
+@use 'sass:map';
+
+$colorsThemes: (
+	// light/white
+	white: #fff,
+	white75: rgba(#fff, 0.75),
+	white50: rgba(#fff, 0.5),
+	white25: rgba(#fff, 0.25),
+	white10: rgba(#fff, 0.1),
+	// light/black
+	black: #000,
+	black75: rgba(#000, 0.75),
+	black50: rgba(#000, 0.5),
+	black25: rgba(#000, 0.25),
+	black10: rgba(#000, 0.1),
+	// light/blackSecondary
+	blackSecondary: #3d3f44,
+	// light/interface
+	interface900: #292d3d,
+	interface750: #545764,
+	interface500: #7f818b,
+	interface250: #a9abb1,
+	interface100: #d4d5d8,
+	interface50: #eaeaec,
+	// light/primary
+	primary01: #0769ad,
+	primary02: #0983d8,
+	primary03: #3a9ce0,
+	primary04: #b5daf3,
+	primary05: #f3f7fa,
+	// light/success
+	"success01": #007a52,
+	success02: #009966,
+	success03: #4db894,
+	success04: #99d6c2,
+	success05: #e6f5f0,
+	// light/alert
+	alert01: #c5631f,
+	alert02: #f67c27,
+	alert03: #f89652,
+	alert04: #fbcba9,
+	alert05: #fef2e9,
+	// light/error
+	error01: #c51f2e,
+	error02: #f6273a,
+	error03: #f96875,
+	error04: #fba9b0,
+	error05: #fee9eb,
+) !default;
+
+//$colorsThemesNames: map.keys($colorsThemes);
+
+//$colorNames: map.keys(map.get($colorsThemes, list.nth($colorsThemesNames, 1)));

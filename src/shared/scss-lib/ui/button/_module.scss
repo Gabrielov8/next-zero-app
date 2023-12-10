@@ -1,0 +1,83 @@
+@use 'sass:map';
+
+@use '@theme' as *;
+@use './variables' as *;
+
+@mixin _renderColorsStates($states) {
+	@each $state, $props in $states {
+		@if $state == default {
+			@include cssColorVars($props, 'btn-');
+		} @else {
+			#{$state} {
+				@include cssColorVars($props, 'btn-');
+			}
+		}
+	}
+}
+
+.root {
+	box-sizing: border-box;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	height: cssVar('btn-height');
+	border-radius: calc(cssVar('btn-radius') * cssVar('btn-height'));
+	padding: cssVar('btn-py') cssVar('btn-px');
+	background-color: cssVar('btn-color');
+	color: cssVar('btn-text-color');
+	border: cssVar('btn-border') solid;
+	border-color: cssVar('btn-border-color', cssVar('btn-color'));
+	text-align: center;
+	line-height: 100%;
+
+	@include arrayCssVars($defaultButtonSizeProps, 'btn-');
+	@include arrayCssVars($buttonDefaults, 'btn-');
+
+	> svg {
+		width: calc(0.5 * cssVar('btn-height'));
+		height: calc(0.5 * cssVar('btn-height'));
+	}
+
+	&.circle {
+		width: cssVar('btn-height');
+		min-width: cssVar('btn-height');
+		max-width: cssVar('btn-height');
+		padding: 0;
+	}
+
+	cursor: pointer;
+
+	&:disabled {
+		cursor: not-allowed;
+	}
+
+	@include typographyVariant(map.get($defaultButtonSizeProps, typography));
+
+	@each $size, $props in $buttonSizes {
+		&.#{$size} {
+			@include arrayCssVars($props, 'btn-');
+			@include typographyVariant(map.get($props, typography));
+			line-height: 100%;
+		}
+	}
+
+	@each $color, $states in $buttonColors {
+		@if $color == $defaultButtonColors {
+			@include _renderColorsStates($states);
+		}
+		&.#{'' + $color} {
+			@include _renderColorsStates($states);
+		}
+	}
+
+	@include withColorsTheme(light, 'not') {
+		&.a11yOutlined {
+			#{cssVarName(btn-border-color)}: cssVar(btn-text-color);
+
+			&:not(:disabled):hover {
+				#{cssVarName(btn-border-color)}: cssVar(btn-color);
+			}
+		}
+	}
+}

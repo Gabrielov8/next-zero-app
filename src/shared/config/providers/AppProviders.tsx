@@ -6,13 +6,11 @@ import { ReduxProvider } from '@/shared/config/store/ReduxProvider';
 
 export const AppProviders: FC<PropsWithChildren> = async ({ children }) => {
 	return (
-		// <ThemeProvider state={getInitialThemeState()}>
 		<QueryClientProvider>
 			<ReduxProvider>
 				{children}
 				<DevTools />
 			</ReduxProvider>
 		</QueryClientProvider>
-		// </ThemeProvider>
 	);
 };

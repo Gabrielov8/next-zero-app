@@ -3,8 +3,7 @@ import { dehydrate, HydrationBoundary, QueryClient } from '@tanstack/react-query
 
 import { CatalogApi } from '@/api/catalog';
 
-import CatalogPage from '@/widgets/pages/CatalogPage/CatalogPage';
-
+import CatalogPage from '@/root-pages/catalog/CatalogPage';
 
 const CatalogIndexPage = async () => {
 	const queryClient = new QueryClient();

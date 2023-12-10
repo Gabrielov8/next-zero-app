@@ -1,0 +1,122 @@
+@use 'sass:map';
+
+@use '../core' as *;
+
+$typhography: (
+	font-family: '"TT Interfaces", Arial, sans-serif',
+	font-weight: 400,
+	font-size: 16px,
+	letter-spacing: normal,
+) !default;
+
+$spacingThemes: (
+	md: (
+		letter-spacing: 0em,
+	),
+	lg: (
+		letter-spacing: 0.2em,
+	),
+	xl: (
+		letter-spacing: 0.4em,
+	),
+) !default;
+
+$familyThemes: (
+	sans-serif: (
+		font-family: '"TT Interfaces", Arial, sans-serif',
+	),
+	serif: (
+		font-family: 'Georgia, serif',
+	),
+) !default;
+
+$fontWeights: (
+	regular: 400,
+	medium: 500,
+	bold: 600,
+) !default;
+
+$fontSizes: (
+	xxs: 10px null null null 12px,
+	xs: 13px null null null 16px,
+	sm: 14px null null 15px 18px,
+	md: 15px null null 16px 20px,
+	lg: 16px null null 18px 24px,
+	xl: 18px null 20px 24px 32px,
+	xxl: 22px 26px 36px null 48px,
+	xxxl: 28px 40px null 47px 64px,
+	xxxxl: 40px 70px null 80px 110px,
+) !default;
+
+$lineHeights: (
+	sm: 100%,
+	md: 115%,
+	lg: 120%,
+	xl: 140%,
+) !default;
+
+$variants: (
+	h1: (
+		font-size: xxxxl,
+		font-weight: regular,
+		line-height: sm,
+		letter-spacing: calc(0.97 * cssVar('letter-spacing') - 0.03em),
+	),
+	h2: (
+		font-size: xxxl,
+		line-height: lg,
+		font-weight: regular,
+	),
+	h3: (
+		font-size: xxl,
+		line-height: lg,
+		font-weight: medium,
+	),
+	h4: (
+		font-size: xl,
+		line-height: md,
+		font-weight: medium,
+	),
+	h5medium: (
+		font-size: lg,
+		line-height: lg,
+		font-weight: medium,
+	),
+	h5: (
+		font-size: lg,
+		line-height: lg,
+		font-weight: regular,
+	),
+	t1bold: (
+		font-size: md,
+		line-height: xl,
+		font-weight: bold,
+	),
+	t1: (
+		font-size: md,
+		line-height: xl,
+		font-weight: regular,
+	),
+	t2: (
+		font-size: sm,
+		line-height: lg,
+		font-weight: medium,
+	),
+	t3bold: (
+		font-size: xs,
+		line-height: lg,
+		font-weight: bold,
+	),
+	t3: (
+		font-size: xs,
+		line-height: lg,
+		font-weight: regular,
+	),
+	t4: (
+		font-size: xxs,
+		line-height: sm,
+		font-weight: medium,
+	),
+) !default;
+
+$variantsNames: map.keys($variants);

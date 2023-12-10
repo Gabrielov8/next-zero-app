@@ -1,0 +1,23 @@
+@use '../core' as *;
+
+// Возвращает глобальную ширину колонок
+@function colsWidth($cols) {
+	@return cssVar('grid-col-#{$cols}-width');
+}
+
+// Возвращает глобальную ширину колонок + gap отступ
+@function colsOffset($cols) {
+	@return calc(#{cssVar('grid-col-#{$cols}-width')} + #{cssVar('grid-gap')});
+}
+
+// на всю ширину контейнера
+@mixin fullWidth() {
+	margin-left: calc(-1 * cssVar(grid-ml));
+	margin-right: calc(-1 * cssVar(grid-mr));
+}
+
+// на всю ширину экрана (даже если > 2000px)
+@mixin fullScreenWidth() {
+	margin-left: calc(-1 * (cssVar(grid-ml) + cssVar(grid-view-mx)));
+	margin-right: calc(-1 * (cssVar(grid-mr) + cssVar(grid-view-mx)));
+}

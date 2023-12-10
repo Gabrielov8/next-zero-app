@@ -1,0 +1,35 @@
+@use '../core' as *;
+@use '../media' as *;
+@use './variables' as *;
+
+:root {
+	@include arrayCssVars($grid, 'grid-');
+
+	#{cssVarName('grid-mx')}: #{cssVar('grid-mx-min')};
+	#{cssVarName('grid-view-width')}: min(100vw, #{cssVar('grid-view-max-width')});
+	#{cssVarName('grid-view-mx')}: calc((100vw - #{cssVar('grid-view-width')}) / 2);
+	#{cssVarName('grid-width')}: calc(#{cssVar('grid-view-width')} - 2 * #{cssVar('grid-mx')});
+	#{cssVarName('grid-gaps-width')}: calc(#{cssVar('grid-gap')} * (#{cssVar('grid-cols')} - 1));
+	#{cssVarName('grid-cols-width')}: calc(#{cssVar('grid-width')} - #{cssVar('grid-gaps-width')});
+	#{cssVarName('grid-col-width')}: calc(#{cssVar('grid-cols-width')} / #{cssVar('grid-cols')});
+
+	@if $gridFixAt != false {
+		@include mediaUp($gridFixAt) {
+			#{cssVarName('grid-mx')}: calc(
+				(#{cssVar('grid-view-width')} - #{cssVar('media-min')}) / 2 + #{cssVar('grid-mx-min')}
+			);
+		}
+	}
+
+	@for $i from 1 through 24 {
+		#{cssVarName('grid-col-#{$i}-width')}: calc(
+			#{cssVar('grid-col-width')} * #{$i} + #{cssVar('grid-gap')} * #{$i - 1}
+		);
+	}
+
+	#{cssVarName('container-ml')}: 0px;
+	#{cssVarName('container-mr')}: 0px;
+
+	#{cssVarName('grid-ml')}: calc(#{cssVar('grid-mx')} + #{cssVar('container-ml')});
+	#{cssVarName('grid-mr')}: calc(#{cssVar('grid-mx')} + #{cssVar('container-mr')});
+}

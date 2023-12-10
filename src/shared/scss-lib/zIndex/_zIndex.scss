@@ -1,0 +1,7 @@
+$minLift: 1;
+$arrowsSlider: 2;
+$storiesPagination: var(--prosv-header-z-index, 10);
+$header: calc(var(--prosv-header-z-index, 10) + 1);
+$modalOverlay: calc(var(--prosv-header-z-index, 10) + 2);
+$modalContent: calc(var(--prosv-header-z-index, 10) + 3);
+$negative: -1;

@@ -1,0 +1,12 @@
+@use 'sass:map';
+
+$breakpoints: (
+	// xs: 320px,
+	sm: 375px,
+	md: 768px,
+	lg: 1024px,
+	xl: 1440px,
+	xxl: 1920px
+) !default;
+
+$breakpointsNames: map.keys($breakpoints);

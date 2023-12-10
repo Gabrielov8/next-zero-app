@@ -1,0 +1,57 @@
+@forward './fonts';
+@forward './colors';
+@forward './typography';
+@forward './swiper';
+
+@forward '~normalize.css/normalize';
+//@forward '~react-toastify/scss/main';
+//@forward '~react-perfect-scrollbar/dist/css/styles';
+
+@forward '@scss-lib/globals.scss';
+
+@use '@theme' as *;
+
+* {
+	box-sizing: inherit;
+}
+
+html,
+body {
+	margin: 0;
+}
+
+html {
+	position: relative;
+	box-sizing: border-box;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+	-ms-overflow-style: scrollbar;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body {
+	position: relative;
+	display: block;
+}
+
+@include withTheme() {
+	background-color: themeColor(white);
+	color: themeColor(black75);
+}
+
+a {
+	text-decoration: none;
+}
+
+button {
+	letter-spacing: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+	margin: 0;
+}

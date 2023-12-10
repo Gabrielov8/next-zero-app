@@ -1,3 +1,5 @@
+'use client';
+
 import { IMetaData } from '@/types/meta.types';
 
 import type { FC } from 'react';
