@@ -1,0 +1,15 @@
+@use 'sass:list';
+@use 'sass:map';
+
+//@use '../core' as *;
+@use './variables' as *;
+
+// Возвращает цвет в соответствии с активной темой либо $default
+@function getColor($color, $default: black) {
+	@if map.get($colorsGLOBAL, $color) == null {
+		@return $default;
+	} @else {
+		@return map.get($colorsGLOBAL, $color);
+	}
+}
+

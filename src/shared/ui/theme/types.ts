@@ -38,10 +38,10 @@ export interface ThemeStore<T extends ThemeState>
 }
 
 export interface ThemeRootDataAttrs<T extends ThemeState> {
-	'data-ui': 'root';
-	'data-ui-colors': T['colors'];
-	'data-ui-spacing': T['spacing'];
-	'data-ui-family': T['family'];
+	'data-prosv': 'root';
+	'data-prosv-colors': T['colors'];
+	'data-prosv-spacing': T['spacing'];
+	'data-prosv-family': T['family'];
 }
 
 export interface ThemeRootProps<T extends ThemeState> {

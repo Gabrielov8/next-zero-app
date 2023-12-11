@@ -1,6 +1,6 @@
 @use '../core' as *;
-@use './variables' as *;
+//@use '../colors' as *;
 @use './helpers' as *;
 
 // Создаются css переменные с цветами для различных тем
-@include cssVarsVariants('colors', $colorsThemes, '&');
+//@include cssVarsVariants('colors', $colorsGLOBAL, '&');

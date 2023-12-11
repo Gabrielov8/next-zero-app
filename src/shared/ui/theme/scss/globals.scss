@@ -2,12 +2,17 @@
 @forward './colors';
 @forward './typography';
 @forward './swiper';
+@forward './core/globals';
+@forward './colors/globals';
+@forward './grid/globals';
+@forward './media/globals';
+@forward './typography/globals';
 
 @forward '~normalize.css/normalize';
 //@forward '~react-toastify/scss/main';
 //@forward '~react-perfect-scrollbar/dist/css/styles';
 
-@forward '@scss-lib/globals.scss';
+//@forward '../../../scss-lib/globals';
 
 @use '@theme' as *;
 
@@ -35,8 +40,8 @@ body {
 }
 
 @include withTheme() {
-	background-color: themeColor(white);
-	color: themeColor(black75);
+	background-color: getColor(white);
+	color: getColor(black75);
 }
 
 a {

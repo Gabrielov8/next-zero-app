@@ -1,7 +1,7 @@
 @use 'sass:list';
 @use 'sass:map';
 
-$colorsThemes: (
+$colorsGLOBAL: (
 	// light/white
 	white: #fff,
 	white75: rgba(#fff, 0.75),
@@ -30,7 +30,7 @@ $colorsThemes: (
 	primary04: #b5daf3,
 	primary05: #f3f7fa,
 	// light/success
-	"success01": #007a52,
+	success01: #007a52,
 	success02: #009966,
 	success03: #4db894,
 	success04: #99d6c2,
@@ -47,8 +47,5 @@ $colorsThemes: (
 	error03: #f96875,
 	error04: #fba9b0,
 	error05: #fee9eb,
-) !default;
+);
 
-//$colorsThemesNames: map.keys($colorsThemes);
-
-//$colorNames: map.keys(map.get($colorsThemes, list.nth($colorsThemesNames, 1)));

@@ -2,4 +2,9 @@
 @use './colors';
 @use './zIndex';
 
-@forward '@scss-lib/helpers';
+//@forward '../../../scss-lib/helpers';
+@forward './colors/helpers';
+@forward './core/helpers';
+@forward './grid/helpers';
+@forward './media/helpers';
+@forward './typography/helpers';

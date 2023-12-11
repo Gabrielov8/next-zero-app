@@ -2,7 +2,7 @@
 
 import { IMetaData } from '@/types/meta.types';
 
-import type { FC } from 'react';
+import { FC, ReactNode } from 'react';
 import dynamic from 'next/dynamic';
 
 import styles from './Layout.module.scss';
@@ -12,7 +12,7 @@ const Header = dynamic(() => import('./components/Header/Header'));
 const Footer = dynamic(() => import('./components/Footer/Footer'));
 
 interface LayoutProps {
-	children: JSX.Element | null;
+	children: ReactNode;
 	meta?: IMetaData;
 }
 

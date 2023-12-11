@@ -1,4 +1,4 @@
-import { ThemeVariants } from '@prosv/core/theme/types';
+import { ThemeVariants } from '@theme/types';
 import { CookieSerializeOptions } from 'cookie';
 
 export const BREAKPOINTS = {

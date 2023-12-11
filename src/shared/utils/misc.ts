@@ -40,7 +40,7 @@ export const StringUtils = {
 };
 
 /**
- * Форматирует число с пробелами 10000 -> 10 000
+ * Форматирует обычное число на число (строку) с пробелами 10000 -> 10 000
  * @param number - число
  */
 export const separateNumber = (number: number): string => {

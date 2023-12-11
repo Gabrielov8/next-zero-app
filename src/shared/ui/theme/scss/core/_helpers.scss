@@ -38,13 +38,13 @@
 }
 
 // Создает css переменные для различных тем и разрешений
-@mixin cssVarsVariants($subject, $variants, $prefix: '') {
-	@each $variant, $vars in $variants {
-		@include withTheme('[data-css-#{$subject}=#{$variant}]') {
-			@include cssVars($vars);
-		}
-	}
-}
+//@mixin cssVarsVariants($subject, $variants, $prefix: '') {
+//  @each $variant, $vars in $variants {
+//    @include withTheme('[data-prosv-#{$subject}=#{$variant}]') {
+//      @include cssVars($vars);
+//    }
+//  }
+//}
 
 // Получает map-объект css переменных без префиксов и объявляет их равными значениям таким же css пременным, но которые с префиксом
 @mixin cssVarsProps($props) {
