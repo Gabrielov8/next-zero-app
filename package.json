@@ -14,14 +14,13 @@
 		"url": "https://gitlab.aeroidea.ru/aero/nextjs-starter-kit.git"
 	},
 	"scripts": {
-		"dev": "yarn variables colors && yarn variables breakpoints && next dev",
+		"dev": "next dev",
 		"build": "next build",
-		"lint": "yarn variables colors && yarn variables breakpoints && tsc && next lint --fix",
+		"lint": "tsc && next lint --fix",
 		"start": "NODE_ENV=production next start",
 		"analyze": "ANALYZE=true next build",
 		"favicons": "real-favicon generate src/assets/meta/meta-description.json src/assets/meta/meta-data.json ./public/meta && cpy public/meta/favicon.ico public",
 		"component": "node ./src/shared/tools/create-component.js",
-		"variables": "node ./src/shared/tools/create-variables.js",
 		"icons": "npx ts-node ./src/shared/tools/icons/iconListGenerator.ts"
 	},
 	"dependencies": {
@@ -48,7 +47,8 @@
 		"redux-devtools-extension": "2.13.9",
 		"redux-thunk": "3.1.0",
 		"sass": "1.69.5",
-		"swiper": "^11.0.5"
+		"swiper": "^11.0.5",
+		"zustand": "^4.4.7"
 	},
 	"devDependencies": {
 		"@babel/core": "7.23.5",

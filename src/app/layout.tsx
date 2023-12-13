@@ -4,6 +4,7 @@ import type { Metadata } from 'next';
 import '@theme/scss/globals.scss';
 
 import { AppProviders } from '@/shared/config/providers';
+import Body from '@/shared/ui/components/Body/Body';
 import Layout from '@/shared/ui/components/Layout/Layout';
 
 export const metadata: Metadata = {
@@ -18,7 +19,11 @@ export default function RootLayout({
 }) {
 	return (
 		<html lang='ru'>
-		<body><AppProviders><Layout>{children}</Layout></AppProviders></body>
+		<Body>
+			<AppProviders>
+				<Layout>{children}</Layout>
+			</AppProviders>
+		</Body>
 		</html>
 	);
 }

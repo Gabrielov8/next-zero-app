@@ -18,5 +18,5 @@
 	@include cssVarsProps(map.keys($typhography));
 }
 
-//@include cssVarsVariants('spacing', $spacingThemes, '&');
-//@include cssVarsVariants('family', $familyThemes, '&');
+@include cssVarsVariants('spacing', $spacingThemes, '&');
+@include cssVarsVariants('family', $familyThemes, '&');

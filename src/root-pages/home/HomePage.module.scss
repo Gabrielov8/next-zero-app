@@ -1,0 +1,17 @@
+@use '@theme' as *;
+
+.root {
+}
+
+.textWrapper {
+	//@include arrayProps(
+	//		(
+	//			width: null null cssVar(grid-col-12-width) cssVar(grid-col-6-width)
+	//		)
+	//);
+}
+
+.text {
+	color: getColor(primary01);
+	@include typographyVariant(h3);
+}

@@ -18,17 +18,17 @@ export const BREAKPOINTS_INDEXES = {
 };
 
 export const defaultThemeState: DefaultThemeState = {
-	colors: 'light',
+	// colors: 'light',
 	spacing: 'md',
 	family: 'sans-serif'
 };
 
 export const defaultThemeVariants: ThemeVariants<DefaultThemeState> = {
-	colors: [
-		{ value: 'light', label: 'Обычная версия' },
-		{ value: 'contrast', label: 'Контрастная' },
-		{ value: 'dark', label: 'Тёмная' }
-	],
+	// colors: [
+	// 	{ value: 'light', label: 'Обычная версия' },
+	// 	{ value: 'contrast', label: 'Контрастная' },
+	// 	{ value: 'dark', label: 'Тёмная' }
+	// ],
 	spacing: [
 		{ value: 'md', label: 'Стандартное' },
 		{ value: 'lg', label: 'Среднее' },
@@ -40,13 +40,13 @@ export const defaultThemeVariants: ThemeVariants<DefaultThemeState> = {
 	]
 };
 
-export const THEME_COOKIES_PREFIX = 'theme-';
+// export const THEME_COOKIES_PREFIX = 'theme-';
 
-export const THEME_COOKIES = {
-	colors: THEME_COOKIES_PREFIX + 'colors',
-	spacing: THEME_COOKIES_PREFIX + 'spacing',
-	family: THEME_COOKIES_PREFIX + 'family'
-};
+// export const THEME_COOKIES = {
+// 	colors: THEME_COOKIES_PREFIX + 'colors',
+// 	spacing: THEME_COOKIES_PREFIX + 'spacing',
+// 	family: THEME_COOKIES_PREFIX + 'family'
+// };
 
 export const themeCookiesOpts: CookieSerializeOptions = {
 	maxAge: 365 * 86400,

@@ -6,10 +6,10 @@
 
 // Возвращает цвет в соответствии с активной темой либо $default
 @function getColor($color, $default: black) {
-	@if map.get($colorsGLOBAL, $color) == null {
+	@if map.get($themeColors, $color) == null {
 		@return $default;
 	} @else {
-		@return map.get($colorsGLOBAL, $color);
+		@return map.get($themeColors, $color);
 	}
 }
 
