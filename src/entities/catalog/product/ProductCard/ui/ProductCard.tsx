@@ -2,7 +2,7 @@ import { IProduct } from '@/types/api/catalog.types';
 
 import React, { FC } from 'react';
 
-import AddToCart from '@/features/catalog/AddToCart/AddToCart';
+import AddToCart from '@/features/catalog/product/AddToCart/AddToCart';
 
 import styles from './ProductCard.module.scss';
 

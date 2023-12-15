@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { useAddToCartState } from '@/features/catalog/AddToCart/AddToCart.state';
+import { useAddToCartState } from '@/features/catalog/product/AddToCart/AddToCart.state';
 
 import Flex from '@/shared/ui/Flex/Flex';
 

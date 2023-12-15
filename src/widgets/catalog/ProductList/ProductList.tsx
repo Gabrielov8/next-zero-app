@@ -2,7 +2,7 @@ import { ICatalogProducts } from '@/types/api/catalog.types';
 
 import React, { FC } from 'react';
 
-import ProductCard from '@/entities/catalog/ProductCard/ui/ProductCard';
+import ProductCard from '@/entities/catalog/product/ProductCard/ui/ProductCard';
 
 import Flex from '@/shared/ui/Flex/Flex';
 

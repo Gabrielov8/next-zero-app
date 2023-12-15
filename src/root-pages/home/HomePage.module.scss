@@ -4,14 +4,13 @@
 }
 
 .textWrapper {
-	//@include arrayProps(
-	//		(
-	//			width: null null cssVar(grid-col-12-width) cssVar(grid-col-6-width)
-	//		)
-	//);
 }
 
 .text {
-	color: getColor(primary01);
 	@include typographyVariant(h3);
+	@include arrayProps(
+			(
+				color: getColor(error01) getColor(alert05) getColor(primary03) getColor(success01)
+			)
+	);
 }

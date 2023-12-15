@@ -1,7 +1,6 @@
 @use 'sass:list';
 @use 'sass:map';
 
-//@use '../core' as *;
 @use './variables' as *;
 
 // Возвращает цвет в соответствии с активной темой либо $default

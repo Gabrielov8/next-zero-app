@@ -2,16 +2,17 @@
 @forward './colors';
 @forward './typography';
 @forward './swiper';
+@forward './mixins';
 @forward './core/globals';
-@forward './colors/globals';
+//@forward './colors/globals';
 @forward './grid/globals';
 @forward './media/globals';
 @forward './typography/globals';
 
 @forward '~normalize.css/normalize';
+
 //@forward '~react-toastify/scss/main';
 //@forward '~react-perfect-scrollbar/dist/css/styles';
-
 //@forward '../../../scss-lib/globals';
 
 @use '@theme' as *;
@@ -39,9 +40,17 @@ body {
 	display: block;
 }
 
+#__next {
+	height: 100%;
+}
+
+.js-focus-visible :focus:not(.focus-visible) {
+	outline: none;
+}
+
 @include withTheme() {
 	background-color: getColor(white);
-	color: getColor(black75);
+	color: getColor(black);
 }
 
 a {
@@ -50,6 +59,10 @@ a {
 
 button {
 	letter-spacing: inherit;
+	border: none;
+	padding: 0;
+	background: transparent;
+	appearance: none;
 }
 
 h1,

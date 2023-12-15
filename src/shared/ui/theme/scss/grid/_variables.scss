@@ -1,8 +1,8 @@
 $grid: (
 	view-max-width: 2000px,
-	mx-min: 20px 40px null null 60px,
-	cols: 12 null 24,
-	gap: 10px null 12px 10px 12px,
+	mx-min: 16px 16px 20px 40px,
+	cols: 8 12 24 null,
+	gap: 8px 16px 12px 16px,
 ) !default;
 
 $gridFixAt: 'lg' !default;

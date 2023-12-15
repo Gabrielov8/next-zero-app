@@ -4,9 +4,7 @@ import type { FC } from 'react';
 import Parser from 'html-react-parser';
 import Head from 'next/head';
 
-import { mediaStyle } from '../MediaQueries/MediaQueries';
-
-import metaData from '@/assets/meta/meta-data.json';
+import metaData from '@/shared/meta/meta-data.json';
 
 const faviconHtml: string = metaData && metaData.favicon.html_code;
 
@@ -33,7 +31,6 @@ const Meta: FC<MetaProps> = ({ meta }) => {
 			{Parser(faviconHtml)}
 			<title>{title ?? DEFAULT_META.title}</title>
 			<meta name='description' content={description ?? DEFAULT_META.description} />
-			<style type='text/css' dangerouslySetInnerHTML={{ __html: mediaStyle }} />
 		</Head>
 	);
 };
