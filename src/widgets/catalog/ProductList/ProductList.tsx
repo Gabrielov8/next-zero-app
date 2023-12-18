@@ -1,10 +1,9 @@
-import { ICatalogProducts } from '@/types/api/catalog.types';
-
 import React, { FC } from 'react';
 
-import ProductCard from '@/entities/catalog/product/ProductCard/ui/ProductCard';
+import ProductCard from '@/entities/catalog/product-card/ui/ProductCard';
 
-import Flex from '@/shared/ui/Flex/Flex';
+import { ICatalogProducts } from '@/shared/types/api/catalog.types';
+import Flex from '@/shared/ui/components/Flex/Flex';
 
 interface Props {
 	productsData?: ICatalogProducts;

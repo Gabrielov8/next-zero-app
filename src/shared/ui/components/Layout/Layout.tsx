@@ -1,13 +1,13 @@
 'use client';
 
-import { IMetaData } from '@/types/meta.types';
-
 import { FC, ReactNode } from 'react';
 import dynamic from 'next/dynamic';
 
 import styles from './Layout.module.scss';
 
-const Meta = dynamic(() => import('@/shared/ui/services/Meta/Meta'));
+import { IMetaData } from '@/shared/types/meta.types';
+
+const Meta = dynamic(() => import('@/shared/meta/Meta/Meta'));
 const Header = dynamic(() => import('./components/Header/Header'));
 const Footer = dynamic(() => import('./components/Footer/Footer'));
 

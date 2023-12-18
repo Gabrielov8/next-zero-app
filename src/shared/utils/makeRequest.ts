@@ -3,7 +3,6 @@ import qs from 'qs';
 
 import { APIError, ApiResponse, axiosErrorHandler, axiosInstance } from '@/shared/config/axios';
 
-
 /**
  * Обертка для создания запроса через Axios
  *

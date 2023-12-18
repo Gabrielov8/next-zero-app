@@ -34,7 +34,7 @@ export default ${componentName};`;
 	try {
 		fs.writeFileSync(
 			path.join(pathName, `${componentName}.module.scss`),
-			'@import "/src/assets/styles/services";'
+			'@use \'@theme\' as *;'
 		);
 		console.log('💅 Styles created successfully!');
 	} catch (e) {

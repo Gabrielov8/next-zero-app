@@ -1,11 +1,5 @@
-import Link from 'next/link';
+import { NotFound } from '@/root-pages/error/Errors';
 
 export default function NotFoundPage() {
-	return (
-		<div>
-			<h2>Not Found</h2>
-			<p>Could not find requested resource</p>
-			<Link href='/'>Return Home</Link>
-		</div>
-	);
+	return <NotFound />;
 }

@@ -3,9 +3,10 @@
 import React from 'react';
 import { useQuery } from '@tanstack/react-query';
 
-import { CatalogApi } from '@/api/catalog';
-
+import { CatalogApi } from '@/widgets/catalog/catalog.api';
 import ProductList from '@/widgets/catalog/ProductList/ProductList';
+
+import Icon from '@/shared/ui/components/Icon/Icon';
 
 const CatalogPage = () => {
 	const { data: productsResponse } = useQuery({
@@ -18,6 +19,10 @@ const CatalogPage = () => {
 	
 	return (
 		<div>
+			<Icon icon={'Warning/Circle_Check'} color={'alert01'} />
+			<Icon icon={'Warning/Octagon_Warning'} color={'success01'} />
+			<Icon icon={'Warning/Help'} color={'error04'} colorType={'stroke'} />
+			<Icon icon={'Warning/Wavy_Check'} />
 			<ProductList productsData={productsData} />
 		</div>
 	);

@@ -1,9 +1,8 @@
 import React from 'react';
 import { dehydrate, HydrationBoundary, QueryClient } from '@tanstack/react-query';
 
-import { CatalogApi } from '@/api/catalog';
-
 import CatalogPage from '@/root-pages/catalog/CatalogPage';
+import { CatalogApi } from '@/widgets/catalog/catalog.api';
 
 const CatalogIndexPage = async () => {
 	const queryClient = new QueryClient();
@@ -12,11 +11,9 @@ const CatalogIndexPage = async () => {
 		queryFn: CatalogApi.getProducts
 	});
 	return (
-		<div>
-			<HydrationBoundary state={dehydrate(queryClient)}>
-				<CatalogPage />
-			</HydrationBoundary>
-		</div>
+		<HydrationBoundary state={dehydrate(queryClient)}>
+			<CatalogPage />
+		</HydrationBoundary>
 	);
 };
 

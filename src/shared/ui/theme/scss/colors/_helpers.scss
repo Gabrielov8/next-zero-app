@@ -1,9 +1,9 @@
 @use 'sass:list';
 @use 'sass:map';
 
-@use './variables' as *;
+@use './colors' as *;
 
-// Возвращает цвет в соответствии с активной темой либо $default
+// Возвращает цвет
 @function getColor($color, $default: black) {
 	@if map.get($themeColors, $color) == null {
 		@return $default;
@@ -12,3 +12,11 @@
 	}
 }
 
+// добавляет классы по цветам
+@mixin colorize($property: background-color) {
+	@each $name, $color in $themeColors {
+		&.#{$name} {
+			#{$property}: $color;
+		}
+	}
+}
