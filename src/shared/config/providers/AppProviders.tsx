@@ -1,6 +1,6 @@
 import { FC, PropsWithChildren } from 'react';
 
-import { DevTools } from '@/shared/config/providers/DevTools';
+import { DevToolsProvider } from '@/shared/config/providers/DevToolsProvider';
 import { QueryClientProvider } from '@/shared/config/providers/QueryClientProvider';
 import { ReduxProvider } from '@/shared/config/store/ReduxProvider';
 
@@ -9,7 +9,7 @@ export const AppProviders: FC<PropsWithChildren> = async ({ children }) => {
 		<QueryClientProvider>
 			<ReduxProvider>
 				{children}
-				<DevTools />
+				<DevToolsProvider />
 			</ReduxProvider>
 		</QueryClientProvider>
 	);

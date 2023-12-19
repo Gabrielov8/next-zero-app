@@ -13,7 +13,7 @@ const ReactQueryDevtoolsProduction = lazy(() =>
 	}))
 );
 
-export const DevTools: FC = () => {
+export const DevToolsProvider: FC = () => {
 	// const pathname = usePathname();
 	const [isEnabled, setEnabled] = useState(false);
 	

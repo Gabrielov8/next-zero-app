@@ -1,5 +1,5 @@
+import { ICatalogProducts } from '@/shared/api/services/catalog';
 import { ApiResponse } from '@/shared/config/axios';
-import { ICatalogProducts } from '@/shared/types/api/catalog.types';
 import { makeRequest } from '@/shared/utils/makeRequest';
 
 export const PRODUCT_ENDPOINTS = { root: '/product', addToFavorite: '/favorite' };

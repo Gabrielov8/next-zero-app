@@ -1,3 +1,7 @@
+export interface ICatalogProductsOpts {
+	page: number;
+}
+
 export interface ICatalogProducts {
 	products: ICatalogProduct[];
 	total: number;

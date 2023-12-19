@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 
 import ProductCard from '@/entities/catalog/product-card/ui/ProductCard';
 
-import { ICatalogProducts } from '@/shared/types/api/catalog.types';
+import { ICatalogProducts } from '@/shared/api/services/catalog';
 import Flex from '@/shared/ui/components/Flex/Flex';
 
 interface Props {

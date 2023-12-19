@@ -1,3 +1,3 @@
 export * from './AppProviders';
-export * from './DevTools';
+export * from './DevToolsProvider';
 export * from './QueryClientProvider';

@@ -4,7 +4,7 @@ import AddToCart from '@/features/catalog/product-card/add-to-cart/ui/AddToCart'
 
 import styles from './ProductCard.module.scss';
 
-import { ICatalogProduct } from '@/shared/types/api/catalog.types';
+import { ICatalogProduct } from '@/shared/api/services/catalog';
 
 interface Props {
 	product: ICatalogProduct;
