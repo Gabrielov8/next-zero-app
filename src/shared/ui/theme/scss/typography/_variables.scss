@@ -19,7 +19,7 @@ $spacingThemes: (
 	xl: (
 		letter-spacing: 0.4em,
 	),
-) !default;
+);
 
 $familyThemes: (
 	sans-serif: (
@@ -28,13 +28,13 @@ $familyThemes: (
 	serif: (
 		font-family: 'Georgia, serif',
 	),
-) !default;
+);
 
 $fontWeights: (
 	regular: 400,
 	medium: 500,
 	bold: 600,
-) !default;
+);
 
 $fontSizes: (
 	xxs: 10px null null null 12px,
@@ -46,16 +46,16 @@ $fontSizes: (
 	xxl: 22px 26px 36px null 48px,
 	xxxl: 28px 40px null 47px 64px,
 	xxxxl: 40px 70px null 80px 110px,
-) !default;
+);
 
 $lineHeights: (
-	sm: 100%,
+	xs: 100%,
 	md: 115%,
 	lg: 120%,
 	xl: 140%,
-) !default;
+);
 
-$variants: (
+$typographyVariants: (
 	h1: (
 		font-size: xxxxl,
 		font-weight: regular,
@@ -117,6 +117,6 @@ $variants: (
 		line-height: sm,
 		font-weight: medium,
 	),
-) !default;
+);
 
-$variantsNames: map.keys($variants);
+$variantsNames: map.keys($typographyVariants);

@@ -1,7 +1,7 @@
 @use 'sass:list';
 @use 'sass:map';
 
-@use './colors' as *;
+@use './variables' as *;
 
 // Возвращает цвет
 @function getColor($color, $default: black) {

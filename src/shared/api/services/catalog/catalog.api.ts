@@ -1,6 +1,6 @@
 import { ICatalogProducts } from '@/shared/api/services/catalog/catalog.types';
 import { ApiResponse } from '@/shared/config/axios';
-import { makeRequest } from '@/shared/utils/makeRequest';
+import { makeRequest } from '@/shared/config/axios/makeRequest';
 
 export const CATALOG_ENDPOINTS = { products: '/products' };
 

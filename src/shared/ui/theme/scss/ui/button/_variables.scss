@@ -4,7 +4,7 @@
 
 $buttonDefaults: (
 	radius: 0,
-) !default;
+);
 
 $buttonSizes: (
 	sm: (
@@ -28,9 +28,9 @@ $buttonSizes: (
 		py: 4px null 5px,
 		typography: h5,
 	),
-) !default;
+);
 
-$defaultButtonSize: md !default;
+$defaultButtonSize: md;
 $defaultButtonSizeProps: map.get($buttonSizes, $defaultButtonSize);
 
 $buttonColors: (
@@ -46,7 +46,7 @@ $buttonColors: (
 			border-color: gray,
 		),
 	),
-) !default;
+);
 
-$defaultButtonColors: default !default;
+$defaultButtonColors: default;
 $defaultButtonColorsProps: map.get($buttonColors, $defaultButtonColors);

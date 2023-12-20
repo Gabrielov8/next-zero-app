@@ -1,7 +1,7 @@
 import { type AxiosRequestConfig } from 'axios';
 import qs from 'qs';
 
-import { APIError, ApiResponse, axiosErrorHandler, axiosInstance } from '@/shared/config/axios';
+import { APIError, ApiResponse, axiosErrorHandler, axiosInstance } from '@/shared/config/axios/index';
 
 /**
  * Обертка для создания запроса через Axios

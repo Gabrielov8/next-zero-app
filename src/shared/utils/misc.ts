@@ -58,7 +58,7 @@ export const ArrayUtils = {
 
 export const StringUtils = {
 	/**
-	 * Делает первую букву слова заглавной
+	 * Делает первую букву строчной
 	 * @param str - строка
 	 */
 	firstLetterToLowerCase: (str: string) => {
@@ -66,6 +66,16 @@ export const StringUtils = {
 			return str;
 		}
 		return str.charAt(0).toLowerCase() + str.substring(1);
+	},
+	/**
+	 * Делает первую букву заглавной
+	 * @param str - строка
+	 */
+	firstLetterToUpperCase: (str: string) => {
+		if (str.length === 0) {
+			return str;
+		}
+		return str.charAt(0).toUpperCase() + str.substring(1);
 	}
 };
 

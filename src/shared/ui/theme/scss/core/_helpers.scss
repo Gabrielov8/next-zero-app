@@ -56,7 +56,7 @@
 
 // Возвращает "абсолютный" url
 @function assetUrl($url) {
-	@return url(#{$microBaseUrl + '/assets/' + $url});
+	@return url(#{$rootBaseUrl + '/assets/' + $url});
 }
 
 // Используется для назначения transition свойств

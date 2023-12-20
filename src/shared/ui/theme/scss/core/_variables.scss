@@ -1,3 +1,3 @@
-$microBaseUrl: '.' !default;
-$cssVarPrefix: '--css-' !default;
-$rootSelector: '[data-css=root]' !default;
+$rootBaseUrl: '../../shared/';
+$cssVarPrefix: '--css-';
+$rootSelector: '[data-css=root]';

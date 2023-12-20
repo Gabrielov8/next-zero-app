@@ -22,9 +22,9 @@ const Layout: FC<LayoutProps> = ({ children, meta }) => {
 			<Meta meta={meta} />
 			<div className={styles.root}>
 				<Header />
-				<div className={styles.content}>
-					<main className={styles.main}>{children}</main>
-				</div>
+				<main className={styles.content}>
+					<div className={styles.main}>{children}</div>
+				</main>
 				<Footer />
 			</div>
 		</>

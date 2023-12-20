@@ -7,7 +7,9 @@
 }
 
 .text {
-	@include typographyVariant(h3);
+	background-image: assetUrl('images/example.jpg');
+	@include typographyVariant(h1);
+	@include fontSize(xxxxl);
 	@include arrayProps(
 			(
 				color: getColor(error01) getColor(alert05) getColor(primary03) getColor(success01)
