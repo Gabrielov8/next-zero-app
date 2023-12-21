@@ -1,8 +1,12 @@
+'use client';
+
 import React from 'react';
 import classNames from 'classnames';
 
 import styles from './HomePage.module.scss';
 import cs from '@theme/scss/theme.module.scss';
+
+import { Button } from '@/shared/ui/components/Button';
 
 const HomePage = () => {
 	return (
@@ -19,6 +23,17 @@ const HomePage = () => {
 					<div>4</div>
 					<div>5</div>
 					<div>6</div>
+				</div>
+				<div>
+					<Button r22={true} className={classNames(cs.h5)} onClick={() => console.log('click')}>
+						Выбрать 1
+					</Button>
+					<Button r22={true}
+									className={classNames(cs.h5)}
+									onClick={() => console.log('click')}
+									color={'primaryOutlined'}>
+						Выбрать 2
+					</Button>
 				</div>
 			</div>
 		</div>
