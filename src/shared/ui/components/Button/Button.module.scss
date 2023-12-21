@@ -1,0 +1,239 @@
+@use '@theme' as *;
+@use "sass:map";
+
+@mixin _renderColorsStates($states) {
+	@each $state, $props in $states {
+		@if $state == default {
+			@include cssColorVars($props, 'btn-');
+		} @else {
+			#{$state} {
+				@include cssColorVars($props, 'btn-');
+			}
+		}
+	}
+}
+
+$buttonDefaults: (
+	radius: 0.5,
+);
+
+$buttonSizes: (
+	md: (
+		height: 40px null 48px,
+		border: 1px,
+		px: 20px,
+		py: 6px null 10px,
+		typography: t1,
+	),
+	lg: (
+		height: 48px null 58px,
+		border: 1px,
+		px: 22px,
+		py: 10px null 14px,
+		typography: h5medium,
+	),
+	xxl: (
+		height: 56px null 64px,
+		border: 1px,
+		px: 15px null 20px,
+		py: 4px null 5px,
+		typography: h5,
+	),
+);
+
+$defaultButtonSize: lg;
+
+$buttonColors: (
+	default: (
+		default: (
+			color: transparent,
+			text-color: primary02,
+		),
+		'&:not(:disabled):hover': (
+			color: transparent,
+			text-color: primary01,
+		),
+		'&:not(:disabled):active': (
+			color: transparent,
+			text-color: primary02,
+		),
+		'&:disabled': (
+			color: transparent,
+			text-color: black25,
+		),
+	),
+	primary: (
+		default: (
+			color: primary02,
+			text-color: white,
+		),
+		'&:not(:disabled):hover': (
+			color: primary03,
+			text-color: white,
+		),
+		'&:not(:disabled):active': (
+			color: primary01,
+		),
+		'&:disabled': (
+			color: primary04,
+			text-color: white,
+		),
+	),
+	primaryOutlined: (
+		default: (
+			color: transparent,
+			text-color: primary02,
+			border-color: primary02,
+		),
+		'&:not(:disabled):hover': (
+			color: primary02,
+			text-color: white,
+		),
+		'&:not(:disabled):active': (
+			color: primary01,
+			text-color: white,
+		),
+		'&:disabled': (
+			color: transparent,
+			text-color: interface250,
+			border-color: interface250,
+		),
+	),
+	secondary: (
+		default: (
+			color: white,
+			text-color: primary02,
+		),
+		'&:not(:disabled):hover': (
+			color: primary05,
+			text-color: primary02,
+		),
+		'&:not(:disabled):active': (
+			color: primary05,
+			text-color: primary01,
+		),
+		'&:disabled': (
+			color: interface50,
+			text-color: interface500,
+		),
+	),
+	secondaryOutlined: (
+		default: (
+			color: transparent,
+			text-color: white,
+			border-color: white,
+		),
+		'&:not(:disabled):hover': (
+			color: white,
+			text-color: primary02,
+		),
+		'&:not(:disabled):active': (
+			color: white50,
+			text-color: white,
+		),
+		'&:disabled': (
+			color: white50,
+			text-color: white75,
+		),
+	),
+);
+
+$defaultButtonSizeProps: map.get($buttonSizes, $defaultButtonSize);
+
+.root {
+	box-sizing: border-box;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	height: cssVar('btn-height');
+	border-radius: calc(cssVar('btn-radius') * cssVar('btn-height'));
+	padding: cssVar('btn-py') cssVar('btn-px');
+	background-color: cssVar('btn-color');
+	color: cssVar('btn-text-color');
+	border: cssVar('btn-border') solid;
+	border-color: cssVar('btn-border-color', cssVar('btn-color'));
+	text-align: center;
+	line-height: 100%;
+
+	@include arrayCssVars($defaultButtonSizeProps, 'btn-');
+	@include arrayCssVars($buttonDefaults, 'btn-');
+
+	> svg {
+		width: calc(0.5 * cssVar('btn-height'));
+		height: calc(0.5 * cssVar('btn-height'));
+	}
+
+	&.circle {
+		width: cssVar('btn-height');
+		min-width: cssVar('btn-height');
+		max-width: cssVar('btn-height');
+		padding: 0;
+	}
+
+	cursor: pointer;
+
+	&:disabled {
+		cursor: not-allowed;
+	}
+
+	@include typographyVariant(map.get($defaultButtonSizeProps, typography));
+
+	@each $size, $props in $buttonSizes {
+		&.#{$size} {
+			@include arrayCssVars($props, 'btn-');
+			@include typographyVariant(map.get($props, typography));
+			line-height: 100%;
+		}
+	}
+
+	@each $color, $states in $buttonColors {
+		@if $color == $buttonColors {
+			@include _renderColorsStates($states);
+		}
+		&.#{'' + $color} {
+			@include _renderColorsStates($states);
+		}
+	}
+
+	//@include withColorsTheme(light, 'not') {
+	&.a11yOutlined {
+		#{cssVarName(btn-border-color)}: cssVar(btn-text-color);
+
+		&:not(:disabled):hover {
+			#{cssVarName(btn-border-color)}: cssVar(btn-color);
+		}
+	}
+
+	//}
+
+	&.r22 {
+		#{cssVarName(btn-radius)}: #{0.222};
+	}
+}
+
+.loader {
+	width: 16px;
+	height: 16px;
+	animation: loading-spinner 1s linear infinite;
+	position: relative;
+
+	svg {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 16px;
+		height: 16px;
+	}
+}
+
+@keyframes loading-spinner {
+	from {
+		transform: rotate(0deg);
+	}
+
+	to {
+		transform: rotate(360deg);
+	}
+}

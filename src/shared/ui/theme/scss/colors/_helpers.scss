@@ -1,6 +1,7 @@
 @use 'sass:list';
 @use 'sass:map';
 
+@use '../core' as *;
 @use './variables' as *;
 
 // Возвращает цвет
@@ -18,5 +19,13 @@
 		&.#{$name} {
 			#{$property}: $color;
 		}
+	}
+}
+
+// Создает css переменные со значениями под активную тему
+@mixin cssColorVars($vars, $prefix: '') {
+	@each $name, $value in $vars {
+		//@error $value;
+		#{cssVarName('#{$prefix}#{$name}')}: #{getColor($value)};
 	}
 }
