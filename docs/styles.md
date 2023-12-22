@@ -43,15 +43,15 @@
 - Ширина в столбцах: `col{1..24}` и `{sm..xxl}Col{1..24}` для разных брейкпоинтов.
 - Отступ в столбцах: `colOffset{1..24}` и `{sm..xxl}ColOffset{1..24}`
 
-`import btn from '@/ui/elements/Button/Button.module.scss';`
+`import { Button } from '@/shared/ui/components/Button';`
 
-- Кнопка: `btn`, `circle`, `{md,lg,xxsl}`, `primary` и тд., см. `src/theme/scss/ui/_button.scss`
+- Кнопка: `btn`, `circle`, `{md,lg,xxsl}`, `primary` и тд., см. `src/shared/ui/components/Button/Button.module.scss`
 
-## SCSS хелперы
+## Использование SCSS-хелперов
 
 `@use '@theme' as *;`
 
-- Цвета: `themeColor`, `withColorsTheme`.
-- Типография: `typographyVariant(sm..xxl)`, `withSpacingTheme`, `withFamilyTheme`.
+- Цвета: получить цвет из палитры `getColor(названия цветы из палитры)`.
+- Типография: `typographyVariant(sm..xxl)`.
 - Media: `mediaUp(sm..xxl)`, `mediaDown(sm..xxl)`, `arrayProps` и `arrayCssVars`.
 - Гриды: `colsWidth` и `colsOffset`.
