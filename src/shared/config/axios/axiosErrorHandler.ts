@@ -3,6 +3,7 @@ import axios from 'axios';
 import { type APIError, type ApiResponse } from './axios.types';
 
 const axiosErrorHandler = <T>(error: APIError): ApiResponse<T> => {
+	// console.log(error);
 	if (axios.isCancel(error)) {
 		if (typeof error === 'object' && 'message' in error) {
 			return { error: error.message };
@@ -11,7 +12,7 @@ const axiosErrorHandler = <T>(error: APIError): ApiResponse<T> => {
 		return {};
 	}
 	
-	console.error(error);
+	// console.error(error);
 	
 	if (axios.isAxiosError(error)) {
 		if (error.response) {
