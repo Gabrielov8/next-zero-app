@@ -4,11 +4,9 @@ export type ButtonSize = 'md' | 'lg' | 'xxl';
 
 export type ButtonColor =
 	| 'primary'
-	| 'primaryLight'
 	| 'primaryOutlined'
 	| 'secondary'
 	| 'secondaryOutlined'
-	| 'gray'
 	| 'default';
 
 export interface ButtonStyleProps {

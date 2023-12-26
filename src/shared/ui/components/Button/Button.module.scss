@@ -153,7 +153,6 @@ $defaultButtonSizeProps: map.get($buttonSizes, $defaultButtonSize);
 	color: cssVar('btn-text-color');
 	border: cssVar('btn-border') solid;
 	border-color: cssVar('btn-border-color', cssVar('btn-color'));
-	text-align: center;
 	line-height: 100%;
 
 	@include arrayCssVars($defaultButtonSizeProps, 'btn-');
@@ -196,7 +195,6 @@ $defaultButtonSizeProps: map.get($buttonSizes, $defaultButtonSize);
 		}
 	}
 
-	//@include withColorsTheme(light, 'not') {
 	&.a11yOutlined {
 		#{cssVarName(btn-border-color)}: cssVar(btn-text-color);
 
@@ -204,8 +202,6 @@ $defaultButtonSizeProps: map.get($buttonSizes, $defaultButtonSize);
 			#{cssVarName(btn-border-color)}: cssVar(btn-color);
 		}
 	}
-
-	//}
 
 	&.r22 {
 		#{cssVarName(btn-radius)}: #{0.222};

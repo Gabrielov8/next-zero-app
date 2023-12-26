@@ -54,7 +54,7 @@
 	}
 }
 
-// Возвращает "абсолютный" url
+// Возвращает "абсолютный" url для assets
 @function assetUrl($url) {
 	@return url(#{$rootBaseUrl + '/assets/' + $url});
 }
