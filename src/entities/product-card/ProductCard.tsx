@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 
-import AddToCart from '@/features/catalog/product-card/add-to-cart/ui/AddToCart';
+import AddToCart from '@/features/product-card/add-to-cart/AddToCart';
 
 import styles from './ProductCard.module.scss';
 

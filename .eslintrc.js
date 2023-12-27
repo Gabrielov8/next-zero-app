@@ -75,7 +75,7 @@ module.exports = {
 			}
 		}
 	],
-	ignorePatterns: ['.eslintrc.js', 'next.config.js', 'mock/**/*', 'src/shared/tools/create-component.js', 'src/shared/tools/create-variables.js'],
+	ignorePatterns: ['.eslintrc.js', 'next.config.js', 'mock/**/*', 'src/shared/tools/*.js', 'src/shared/hygen/**/*.js'],
 	globals: {
 		caches: false,
 		fetch: false
