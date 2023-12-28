@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 
-import ProductCard from '@/entities/catalog/product-card/ui/ProductCard';
+import ProductCard from '@/entities/product-card/ProductCard';
 
 import { ICatalogProducts } from '@/shared/api/services/catalog';
 import Flex from '@/shared/ui/components/Flex/Flex';
