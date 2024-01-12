@@ -1,1 +1,1 @@
-[Ссылка на документацию](https://aeroidea.atlassian.net/wiki/spaces/AERO/pages/2012086282/Starter-kit)
+[Ссылка на документацию по деплою](./docs/deploy.md)

@@ -5,6 +5,7 @@ import { FC, lazy, Suspense, useEffect, useState } from 'react';
 import { getCookie, setCookie } from '@/shared/utils/cookies';
 import { isDev } from '@/shared/utils/misc';
 
+// название куки для того, чтобы включить девтулзы в проде
 const DEV_TOOLS_COOKIE = 'devTools';
 
 const ReactQueryDevtoolsProduction = lazy(() =>
