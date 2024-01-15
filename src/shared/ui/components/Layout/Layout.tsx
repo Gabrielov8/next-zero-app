@@ -1,5 +1,3 @@
-'use client';
-
 import { FC, ReactNode } from 'react';
 import dynamic from 'next/dynamic';
 
@@ -23,7 +21,7 @@ const Layout: FC<LayoutProps> = ({ children, meta }) => {
 			<div className={styles.root}>
 				<Header />
 				<main className={styles.content}>
-					<div className={styles.main}>{children}</div>
+					<section className={styles.main}>{children}</section>
 				</main>
 				<Footer />
 			</div>

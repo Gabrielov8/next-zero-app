@@ -6,7 +6,7 @@ import React from "react";
 export default function Home() {
 	return (
 		<section>
-			<Button r22 className={classNames(cs.h5)} onClick={() => console.log(1)}>
+			<Button r22 className={classNames(cs.h5)}>
 				Выбрать 1
 			</Button>
 			<Button r22 className={classNames(cs.h5)} color="primaryOutlined">

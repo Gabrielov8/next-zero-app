@@ -4,60 +4,6 @@
 @use '../media' as *;
 @use './variables' as *;
 
-//// Проверяет есть ли в map-объекте $spacingThemes элемент $theme
-//@function assertSpacingTheme($theme) {
-//	@if map.has-key($spacingThemes, $theme) {
-//		@return true;
-//	} @else {
-//		@error 'Unknown spacing theme "#{$theme}".';
-//	}
-//}
-//
-//// Возвращает селектор корневого элемента с темой межсловных интервалов
-//@function spacingThemeSelector($theme, $mod: null) {
-//	@if assertSpacingTheme($theme) {
-//		$res: '[data-css-spacing=#{$theme}]';
-//		@if $mod != null {
-//			$res: ':#{$mod}(#{$res})';
-//		}
-//		@return rootSelector($res);
-//	}
-//}
-//
-//// Применяет стили к селектору корневого элемента с темой межсловных интервалов
-//@mixin withSpacingTheme($theme, $mod: null) {
-//	#{spacingThemeSelector($theme, $mod)} & {
-//		@content;
-//	}
-//}
-//
-//// Проверяет есть ли в map-объекте $familyThemes элемент $theme
-//@function assertFamilyTheme($theme) {
-//	@if map.has-key($familyThemes, $theme) {
-//		@return true;
-//	} @else {
-//		@error 'Unknown family theme "#{$theme}".';
-//	}
-//}
-//
-//// Возвращает селектор корневого элемента с темой шрифта
-//@function familyThemeSelector($theme, $mod: null) {
-//	@if assertFamilyTheme($theme) {
-//		$res: '[data-css-family=#{$theme}]';
-//		@if $mod != null {
-//			$res: ':#{$mod}(#{$res})';
-//		}
-//		@return rootSelector($res);
-//	}
-//}
-//
-//// Применяет стили к селектору корневого элемента с темой шрифта
-//@mixin withFamilyTheme($theme, $addon: null) {
-//	#{familyThemeSelector($theme, $addon)} & {
-//		@content;
-//	}
-//}
-
 // Возвращает значение размера шрифта $name в соответствии с темой и адаптивом
 @function getFontSize($name, $default: $name) {
 	@if map.has-key($fontSizes, $name) {
@@ -124,23 +70,3 @@
 		@error 'Unknown typography variant #{$name}';
 	}
 }
-
-//@function isTypographyProp($name) {
-//	@if $name == font-weight or $name == font-size {
-//		@return true;
-//	} @else {
-//		@return false;
-//	}
-//}
-
-//@mixin renderProp($name, $value, $asIs: false) {
-//	@if isTypographyProp($name) {
-//		@if $name == typography {
-//			@include typographyVariant($value);
-//		} @else {
-//			@include _renderProp($name, $value);
-//		}
-//	} @else if $asIs {
-//		#{$name}: #{$value};
-//	}
-//}

@@ -1,14 +1,14 @@
 import React from 'react';
 
-import Flex from '@/shared/ui/components/Flex/Flex';
-import {useAddToFavoritesState} from "./AddToFavorites.state";
+import { useAddToFavoritesState } from "./AddToFavorites.state";
+
 
 const AddToFavorites = () => {
 	const { handleAddToFavorites } = useAddToFavoritesState();
 	return (
-		<Flex onClick={handleAddToFavorites}>
+		<div onClick={handleAddToFavorites}>
 			ДОБАВИТЬ В КОРЗИНУ
-		</Flex>
+		</div>
 	);
 };
 

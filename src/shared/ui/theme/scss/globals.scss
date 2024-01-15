@@ -3,17 +3,13 @@
 @forward './typography';
 @forward './swiper';
 @forward './mixins';
-@forward './core/globals';
 @forward './colors/globals';
-@forward './grid/globals';
 @forward './media/globals';
 @forward './typography/globals';
 
 @forward '~normalize.css/normalize';
 
 @forward '~react-toastify/scss/main';
-//@forward '~react-perfect-scrollbar/dist/css/styles';
-//@forward '../../../scss-lib/globals';
 
 @use '@theme' as *;
 
@@ -70,6 +66,9 @@ h2,
 h3,
 h4,
 h5,
+ul,
+ol,
 p {
 	margin: 0;
+	padding: 0;
 }

@@ -7,7 +7,6 @@ import {
 import { OptionsType } from 'cookies-next/lib/types';
 
 export const path = '/';
-// export const day = 24 * 60 * 60 * 1000;
 
 /**
  * Устанавливает cookie

@@ -1,12 +1,12 @@
-import { FC } from 'react';
-
-import ProductPage from '@/root-pages/product/ProductPage';
+import React, { FC } from 'react';
 
 type Props = { params: { slug: string } };
 
 const ProductDetailPage: FC<Props> = ({ params: { slug } }) => {
 	return (
-		<ProductPage slug={slug} />
+		<div>
+			детальная страница товара {slug}
+		</div>
 	);
 };
 

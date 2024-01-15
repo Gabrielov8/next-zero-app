@@ -33,4 +33,4 @@
 6. В файле `next.config.js` в модуле настроек Sentry - `withSentryConfig` изменить `url` на адрес удалённого сервера, на
    котором развёрнут Sentry.
 7. Пример обработки ошибки расположен по адресу [sentry-example-page](../src/app/sentry-example-page/page.tsx). Также
-   обработчик Sentry добавлен на [страницу глобальных ошибок](../src/app/global-error.tsx).
+   обработчик Sentry добавлен на [страницу глобальных ошибок](../src/app/(error)/global-error.tsx).

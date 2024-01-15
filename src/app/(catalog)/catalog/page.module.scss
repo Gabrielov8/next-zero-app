@@ -1,0 +1,10 @@
+@use '@theme' as *;
+
+.text {
+  @include typographyVariant(h1);
+  @include arrayProps(
+      (
+        color: getColor(error01) getColor(alert05) getColor(primary03) getColor(success01)
+      )
+  );
+}

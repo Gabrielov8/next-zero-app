@@ -43,7 +43,7 @@ export const themeColors = {
 	greyTinted: '#888888',
 	greyPale: '#AAAAAA',
 	blackSecondary: '#3d3f44',
-	transparent: 'transparent'
+	transparent: 'transparent',
 } as const;
 
 export type TColorKey = keyof typeof themeColors;

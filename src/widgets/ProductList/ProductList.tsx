@@ -1,9 +1,8 @@
 import React, { FC } from 'react';
 
-import ProductCard from '@/entities/product-card/ProductCard';
+import ProductCard from '@/widgets/ProductCard/ProductCard';
 
 import { ICatalogProducts } from '@/shared/api/services/catalog';
-import Flex from '@/shared/ui/components/Flex/Flex';
 
 interface Props {
 	productsData?: ICatalogProducts;
@@ -17,13 +16,13 @@ const ProductList: FC<Props> = ({ productsData }) => {
 	const { products: productList } = productsData;
 	
 	return (
-		<Flex style={{ flexWrap: 'wrap', gap: '10px 20px' }}>
+		<section>
 			{productList.map(product => {
 				return (
 					<ProductCard key={product.id} product={product} />
 				);
 			})}
-		</Flex>
+		</section>
 	);
 };
 

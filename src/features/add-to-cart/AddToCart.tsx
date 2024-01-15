@@ -1,15 +1,14 @@
+'use client'
 import React from 'react';
 
-import { useAddToCartState } from '@/features/product-card/add-to-cart/AddToCart.state';
-
-import Flex from '@/shared/ui/components/Flex/Flex';
+import { useAddToCartState } from '@/features/add-to-cart/AddToCart.state';
 
 const AddToCart = () => {
 	const { handleAddToCart } = useAddToCartState();
 	return (
-		<Flex onClick={handleAddToCart}>
+		<button onClick={handleAddToCart}>
 			ДОБАВИТЬ В КОРЗИНУ
-		</Flex>
+		</button>
 	);
 };
 
