@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 
-import AddToCart from '@/features/product-card/add-to-cart/AddToCart';
+import AddToCart from '@/features/add-to-cart/AddToCart';
 
 import styles from './ProductCard.module.scss';
 
@@ -12,12 +12,12 @@ interface Props {
 
 const ProductCard: FC<Props> = ({ product }) => {
 	return (
-		<div
+		<article
 			className={styles.root}
 		>
 			<span>{product.title}</span>
 			<AddToCart />
-		</div>
+		</article>
 	);
 };
 
